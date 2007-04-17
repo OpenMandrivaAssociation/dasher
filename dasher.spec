@@ -1,6 +1,6 @@
 Summary: Graphical predictive text entry system
 Name: dasher
-Version: 4.4.0
+Version: 4.4.1
 Release: %mkrel 1
 License: GPL
 Group: Accessibility
@@ -15,7 +15,7 @@ BuildRequires: gnome-speech-devel
 BuildRequires: at-spi-devel
 BuildRequires: libcanna-devel
 BuildRequires: scrollkeeper
-BuildRequires: gnome-doc-utils libxslt-proc
+BuildRequires: gnome-doc-utils
 BuildRequires: perl-XML-Parser
 BuildRequires: ImageMagick
 BuildRequires: desktop-file-utils
@@ -88,5 +88,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_miconsdir}/%name.png
 %{_mandir}/man1/*
 %{_datadir}/omf/dasher/dasher-C.omf
-
-
