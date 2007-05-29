@@ -13,7 +13,6 @@ BuildRequires: libgnomeui2-devel
 BuildRequires: libwnck-devel >= 2.10.0
 BuildRequires: gnome-speech-devel
 BuildRequires: at-spi-devel
-BuildRequires: libcanna-devel
 BuildRequires: scrollkeeper
 BuildRequires: gnome-doc-utils
 BuildRequires: perl-XML-Parser
