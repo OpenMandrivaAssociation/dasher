@@ -1,10 +1,10 @@
 Summary: Graphical predictive text entry system
 Name: dasher
 Version: 4.5.2
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
 Group: Accessibility
-URL: http://www.infer-ence.phy.cam.ac.uk/dasher/
+URL: http://www.dasher.org.uk/
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: expat-devel
