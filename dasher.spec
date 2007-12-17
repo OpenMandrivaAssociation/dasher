@@ -6,7 +6,6 @@ License: GPL
 Group: Accessibility
 URL: http://www.dasher.org.uk/
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: expat-devel
 BuildRequires: libglade2.0-devel
 BuildRequires: libgnomeui2-devel
