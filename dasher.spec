@@ -1,6 +1,6 @@
 Summary: Graphical predictive text entry system
 Name: dasher
-Version: 4.7.0
+Version: 4.7.3
 Release: %mkrel 1
 License: GPL
 Group: Accessibility
