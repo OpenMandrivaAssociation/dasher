@@ -67,10 +67,8 @@ convert -scale 16 Data/%name.png %buildroot%_miconsdir/%name.png
 %update_icon_cache hicolor
 %endif
 
-%if %mdkversion < 200900
 %preun
 %preun_uninstall_gconf_schemas dasher
-%endif
 
 %if %mdkversion < 200900
 %postun
@@ -78,6 +76,7 @@ convert -scale 16 Data/%name.png %buildroot%_miconsdir/%name.png
 %{clean_desktop_database}
 %clean_menus
 %clean_icon_cache hicolor
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
