@@ -1,7 +1,7 @@
 Summary: Graphical predictive text entry system
 Name: dasher
 Version: 4.7.3
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
 Group: Accessibility
 URL: http://www.dasher.org.uk/
@@ -58,17 +58,26 @@ install -m 644 -D Data/%name.png %buildroot%_liconsdir/%name.png
 convert -scale 32 Data/%name.png %buildroot%_iconsdir/%name.png
 convert -scale 16 Data/%name.png %buildroot%_miconsdir/%name.png
 
+%if %mdkversion < 200900
 %post
-if [ -x %{_bindir}/scrollkeeper-update ]; then %{_bindir}/scrollkeeper-update -q || true ; fi
+%update_scrollkeeper
 %{update_desktop_database}
 %post_install_gconf_schemas dasher
+%update_menus
+%update_icon_cache hicolor
+%endif
 
+%if %mdkversion < 200900
 %preun
 %preun_uninstall_gconf_schemas dasher
+%endif
 
+%if %mdkversion < 200900
 %postun
-if [ -x %{_bindir}/scrollkeeper-update ]; then %{_bindir}/scrollkeeper-update -q || true ; fi
+%clean_scrollkeeper
 %{clean_desktop_database}
+%clean_menus
+%clean_icon_cache hicolor
 
 %clean
 rm -rf $RPM_BUILD_ROOT
