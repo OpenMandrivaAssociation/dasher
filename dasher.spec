@@ -20,6 +20,7 @@ BuildRequires: gnome-doc-utils
 BuildRequires: perl-XML-Parser
 BuildRequires: ImageMagick
 BuildRequires: desktop-file-utils
+BuildRequires: intltool
 Requires(post): scrollkeeper
 Requires(postun): scrollkeeper
 Requires(post): desktop-file-utils
