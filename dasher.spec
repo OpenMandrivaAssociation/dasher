@@ -1,13 +1,11 @@
 Summary: Graphical predictive text entry system
 Name: dasher
-Version: 4.7.3
-Release: %mkrel 2
-License: GPL
+Version: 4.9.0
+Release: %mkrel 1
+License: GPLv2+
 Group: Accessibility
 URL: http://www.dasher.org.uk/
 Source0: ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.bz2
-# (fc) 4.7.3-2mdv fix linking
-Patch0: dasher-4.7.3-fixlinking.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: expat-devel
 BuildRequires: libglade2.0-devel
@@ -33,10 +31,6 @@ system wherever a full-size keyboard cannot be used.
 
 %prep
 %setup -q
-%patch0 -p1 -b .fixlinking
-
-#needed by patch0
-autoreconf
 
 %build
 
