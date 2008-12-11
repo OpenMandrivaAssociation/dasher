@@ -16,7 +16,7 @@ BuildRequires: at-spi-devel
 BuildRequires: scrollkeeper
 BuildRequires: gnome-doc-utils
 BuildRequires: perl-XML-Parser
-BuildRequires: ImageMagick
+BuildRequires: imagemagick
 BuildRequires: desktop-file-utils
 BuildRequires: intltool
 Requires(post): scrollkeeper
