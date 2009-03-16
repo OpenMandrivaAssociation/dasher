@@ -1,7 +1,7 @@
 Summary: Graphical predictive text entry system
 Name: dasher
-Version: 4.9.0
-Release: %mkrel 3
+Version: 4.10.0
+Release: %mkrel 1
 License: GPLv2+
 Group: Accessibility
 URL: http://www.dasher.org.uk/
@@ -46,7 +46,7 @@ GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 rm -rf %buildroot/var/lib/scrollkeeper
 
 %find_lang %{name} --with-gnome
-for omf in %buildroot%_datadir/omf/*/*-??.omf;do
+for omf in %buildroot%_datadir/omf/*/*-??*.omf;do
 echo "%lang($(basename $omf|sed -e s/.*-// -e s/.omf//)) $(echo $omf|sed s!%buildroot!!)" >> %name.lang
 done
 
