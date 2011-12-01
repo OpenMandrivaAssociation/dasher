@@ -40,7 +40,7 @@ system wherever a full-size keyboard cannot be used.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT %name.lang
+rm -rf %{buildroot} %name.lang
 
 GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std
 rm -rf %buildroot/var/lib/scrollkeeper
@@ -53,7 +53,7 @@ done
 
 desktop-file-install --vendor="" \
   --add-category="X-MandrivaLinux-MoreApplications-Accessibility" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
+  --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 mkdir -p %buildroot%_miconsdir
 install -m 644 -D Data/%name.png %buildroot%_liconsdir/%name.png
@@ -81,7 +81,7 @@ convert -scale 16 Data/%name.png %buildroot%_miconsdir/%name.png
 %endif
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
