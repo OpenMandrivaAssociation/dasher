@@ -1,5 +1,5 @@
---- Src/Gtk2/game_mode_helper.cpp~	2008-03-02 19:20:15.000000000 +0100
-+++ Src/Gtk2/game_mode_helper.cpp	2009-03-07 01:59:04.000000000 +0100
+--- ./Src/Gtk2/game_mode_helper.cpp~	2008-03-02 19:20:15.000000000 +0100
++++ ./Src/Gtk2/game_mode_helper.cpp	2009-03-07 01:59:04.000000000 +0100
 @@ -322,7 +322,7 @@
  				   GTK_DIALOG_MODAL,
  				   GTK_MESSAGE_INFO,
