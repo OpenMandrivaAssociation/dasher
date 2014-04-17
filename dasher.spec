@@ -29,7 +29,7 @@ system wherever a full-size keyboard cannot be used.
 %apply_patches
 
 %build
-%configure2_5x --disble-a11y --disable-speech
+%configure2_5x --disable-a11y --disable-speech
 
 %make LIBS="-lX11"
 
