@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(ice)
 BuildRequires:	pkgconfig(libwnck-1.0)
+BuildRequires:	pkgconfig(xtst)
 
 %description 
 Dasher is an information-efficient text-entry interface, driven by natural 
