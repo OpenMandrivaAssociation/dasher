@@ -15,11 +15,8 @@ BuildRequires:	intltool
 BuildRequires:	perl-XML-Parser
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(gnome-doc-utils)
-BuildRequires:	pkgconfig(gnome-speech-1.0)
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(ice)
-BuildRequires:	pkgconfig(libglade-2.0)
-BuildRequires:	pkgconfig(libgnomeui-2.0)
-BuildRequires:	pkgconfig(libspi-1.0)
 BuildRequires:	pkgconfig(libwnck-1.0)
 
 %description 
@@ -32,7 +29,7 @@ system wherever a full-size keyboard cannot be used.
 %apply_patches
 
 %build
-%configure2_5x
+%configure2_5x --disble-a11y --disable-speech
 
 %make LIBS="-lX11"
 
@@ -50,7 +47,6 @@ mkdir -p %{buildroot}%{_miconsdir}
 
 %files -f %{name}.lang
 %doc README AUTHORS ChangeLog
-%{_sysconfdir}/gconf/schemas/dasher.schemas
 %{_bindir}/*
 %{_datadir}/applications/dasher.desktop
 %{_datadir}/dasher
