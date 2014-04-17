@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(gnome-doc-utils)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(ice)
 BuildRequires:	pkgconfig(libwnck-1.0)
+BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(xtst)
 
 %description 
