@@ -31,7 +31,10 @@ system wherever a full-size keyboard cannot be used.
 %apply_patches
 
 %build
-%configure2_5x --disable-a11y --disable-speech
+export CC=gcc
+export CXX=g++
+
+%configure --disable-a11y --disable-speech
 
 %make LIBS="-lX11"
 
