@@ -28,7 +28,7 @@ system wherever a full-size keyboard cannot be used.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 export CC=gcc
